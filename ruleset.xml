@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<ruleset name="ApprovedFood">
+ <description>Approved Food coding standard.</description>
+    <rule ref="/_sites/Standards_ApprovedFood"/>
+
+    <!-- Exclude third party code -->
+    <exclude-pattern>*/.git/*</exclude-pattern>
+
+    <!-- Squiz is our main standard. Any clashes from other standards should be excluded -->
+    <rule ref="Squiz">
+        <!-- TEMPORARY while code is brought closer to standards -->
+        <exclude name='Squiz.NamingConventions.ValidFunctionName.NotCamelCaps'/>
+        <exclude name='Squiz.PHP.GlobalKeyword.NotAllowed' />
+        <exclude name='Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps' />
+        <exclude name='Squiz.PHP.DisallowMultipleAssignments.Found' />
+        <!-- Regular standards  -->
+        <exclude name="Squiz.Classes.ClassFileName"/>
+        <exclude name="Squiz.Classes.ValidClassName"/>
+        <exclude name="Squiz.Commenting.ClassComment"/>
+        <exclude name="Squiz.Commenting.FileComment"/>
+        <exclude name="Squiz.Commenting.FunctionComment"/>
+        <exclude name="Squiz.Commenting.VariableComment"/>
+        <exclude name="Squiz.Files.FileExtension"/>
+        <exclude name="Squiz.Commenting.BlockComment.NoCaptial "/>
+        <!-- <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" /> -->
+        <exclude name='Squiz.WhiteSpace.FunctionSpacing.Before' />
+        <exclude name='Squiz.WhiteSpace.FunctionSpacing.After' />
+        <exclude name='Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose' />
+        <exclude name='Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue' />
+        <exclude name='Squiz.Commenting.InlineComment.InvalidEndChar' />
+        <exclude name='Squiz.PHP.DisallowInlineIf.Found' />
+        <exclude name='Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned' />
+        <exclude name='Squiz.CodeAnalysis.EmptyStatement.NotAllowed' />
+        <exclude name='Squiz.NamingConventions.ConstantCase.Found' />
+        <exclude name='Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore' />
+        <!-- Unwanted standards -->
+        <exclude name='Squiz.Strings.ConcatenationSpacing.Missing' />
+        <exclude name='Squiz.PHP.DisallowComparisonAssignment.AssignedBool' />
+        <exclude name='Squiz.ControlStructures.ElseIfDeclaration.NotAllowed' />
+    </rule>
+
+    <rule ref="Generic.Files.LineEndings">
+         <properties>
+             <!-- RC: Personal preference. We're using Linux line endings -->
+             <property name="eolChar" value="\n"/>
+         </properties>
+    </rule>
+    <rule ref="Generic.Files.LineLength">
+         <properties>
+             <property name="lineLimit" value="130"/>
+             <property name="absoluteLineLimit" value="200"/>
+         </properties>
+    </rule>
+
+    <rule ref="Zend">
+         <!-- RC: Personal preference. There is no need for underscores with PHP5 -->
+         <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+         <exclude name="Zend.Files.ClosingTag.NotAllowed "/>
+    </rule>
+    <rule ref="CakePHP">
+        <!-- Unwanted standards -->
+        <exclude name='CakePHP.NamingConventions.ValidVariableName.NotCamelCaps' />
+        <!-- Clashes with other rules -->
+        <exclude name='CakePHP.Strings.ConcatenationSpacing.MissingAfter' />
+        <exclude name='CakePHP.WhiteSpace.ScopeIndent.Incorrect' />
+        <exclude name='CakePHP.WhiteSpace.OperatorSpacing.NoSpaceAfter' />
+        <exclude name='CakePHP.WhiteSpace.OperatorSpacing.NoSpaceBefore' />
+    </rule>
+    <rule ref="Drupal">
+        <!-- Unwanted standards -->
+        <exclude name='Drupal.WhiteSpace.ScopeIndent.IncorrectExact'/>
+        <exclude name='Drupal.Commenting.InlineComment.NoSpaceBefore' />
+        <exclude name='Drupal.Commenting.FunctionComment.Missing' />
+        <exclude name='Drupal.WhiteSpace.ScopeClosingBrace' />
+        <exclude name='Drupal.NamingConventions.ValidVariableName' />
+        <exclude name='Drupal.NamingConventions.ValidGlobal.GlobalUnderScore' />
+        <exclude name='Drupal.ControlStructures.ElseCatchNewline.ElseNewline' />
+        <exclude name='Drupal.Commenting.FileComment.Missing' />
+        <!-- Clashes with other rules -->
+        <exclude name='Drupal.Commenting.DocCommentAlignment.SpaceBeforeAsterisk' />
+        <exclude name='Drupal.ControlStructures.ControlSignature' />
+     </rule>
+
+     <rule ref="PEAR">
+            <exclude name="PEAR.Commenting.FunctionComment.Missing" />
+           <!-- RC: Personal preference. There is no need for underscores with PHP5 -->
+           <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+           <!-- RC: Personal preference. There is no need for underscores with PHP5 -->
+           <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+           <!-- RC: Personal preference. We'll be missing @category and the PHP Version -->
+           <exclude name="PEAR.Commenting.ClassComment.MissingTag"/>
+           <!-- <exclude name="PEAR.WhiteSpace.ScopeIndent.Incorrect"/> -->
+           <!-- RC: Personal preference. What is the category/link for ? -->
+           <exclude name="PEAR.Commenting.FileComment.MissingTag"/>
+           <!-- RC: Personal preference. I don't see the point of specifying the PHP version -->
+           <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
+           <!-- Clash with Squiz -->
+           <exclude name='PEAR.Functions.FunctionDeclaration.BraceOnSameLine'/>
+           <exclude name='PEAR.Classes.ClassDeclaration.OpenBraceNewLine' />
+           <exclude name='PEAR.ControlStructures.ControlSignature' />
+       </rule>
+
+     <!-- Drop severity of this rule whilst converting code -->
+     <rule ref='Squiz.NamingConventions.ValidVariableName.NotCamelCaps'>
+        <severity>3</severity>
+     </rule>
+
+     <rule ref='Generic'>
+        <exclude name='Generic.NamingConventions.UpperCaseConstantName.ConstantNotUpperCase' />
+        <!-- <exclude name='Generic.PHP.LowerCaseConstant.Found'/> -->
+        <!--Allow constant in lowercase-->
+        <exclude name='Generic.PHP.UpperCaseConstant' />
+        <exclude name='Generic.WhiteSpace.DisallowSpaceIndent.TabsUsed'/>
+        <exclude name='Generic.Files.EndFileNoNewline.Found' />
+        <exclude name='Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps'/>
+        <exclude name='Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine' />
+        <exclude name='Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine' />
+        <exclude name='Generic.Formatting.MultipleStatementAlignment.NotSame ' />
+        <exclude name='Generic.PHP.CharacterBeforePHPOpeningTag.Found' />
+        <exclude name='Generic.Files.LineLength' />
+        <exclude name='Generic.Formatting.SpaceAfterCast.NoSpace' />
+        <exclude name='Generic.CodeAnalysis.EmptyStatement.NotAllowedWarning' />
+        <exclude name='Generic.WhiteSpace.ScopeIndent.IncorrectExact' />
+        <!-- <exclude name='Generic.PHP.DisallowShortOpenTag.EchoFound' /> -->
+        <exclude name='Generic.PHP.ClosingPHPTag.NotFound' />
+     </rule>
+
+ <!--
+    Boolean values should be specified by using the strings
+    "true" and "false" rather than the integers 0 and 1.
+ -->
+ <rule ref="Generic.Formatting.MultipleStatementAlignment">
+  <properties>
+   <property name="maxPadding" value="8"/>
+   <property name="ignoreMultiLine" value="true"/>
+   <property name="error" value="true"/>
+  </properties>
+ </rule>
+
+ <!-- Use warnings for inline control structures -->
+ <rule ref="Generic.ControlStructures.InlineControlStructure">
+     <properties>
+         <property name="error" value="false"/>
+     </properties>
+ </rule>
+
+ <!--Disallow constant in lowercase-->
+ <rule ref="Generic.PHP.LowerCaseConstant"/>
+
+ <!--Indent with exactly one char-->
+ <rule ref="Generic.WhiteSpace.ScopeIndent">
+     <properties>
+         <property name="indent" value="4"/>
+         <property name="exact" value="true"/>
+     </properties>
+ </rule>
+</ruleset>
