@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<ruleset name="ApprovedFood">
+ <description>Approved Food coding standard.</description>
+    <rule ref="/_sites/Standards_ApprovedFood/ApprovedFood"/>
+
+    <!-- Exclude third party code -->
+    <exclude-pattern>*/.git/*</exclude-pattern>
+
+    <!-- Ensure our code is compatibile with latest PHP -->
+    <!-- <rule ref='PHPCompatibility'></rule> -->
+    <!-- Squiz is our main standard. Any clashes from other standards should be excluded -->
+    <rule ref="Squiz">
+        <!-- TEMPORARY while code is brought closer to standards -->
+        <!-- Regular standards  -->
+        <exclude name='Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned' />
+        <exclude name="Squiz.Classes.ClassFileName"/>
+        <exclude name="Squiz.Classes.ValidClassName"/>
+        <exclude name='Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace' />
+        <exclude name='Squiz.CodeAnalysis.EmptyStatement.NotAllowed' />
+        <exclude name='Squiz.ControlStructures.ElseIfDeclaration.NotAllowed' />
+        <exclude name="Squiz.Commenting.BlockComment.NoCaptial "/>
+        <exclude name="Squiz.Commenting.ClassComment"/>
+        <exclude name="Squiz.Commenting.FileComment"/>
+        <!-- <exclude name="Squiz.Commenting.FunctionComment"/> -->
+        <exclude name='Squiz.Commenting.FunctionCommentThrowTag.Missing' />
+        <exclude name='Squiz.Commenting.InlineComment.InvalidEndChar' />
+        <exclude name='Squiz.Commenting.InlineComment.NoSpaceBefore' />
+        <exclude name='Squiz.Commenting.InlineComment.NotCapital' />
+        <exclude name='Squiz.Commenting.PostStatementComment.Found' />
+        <!-- <exclude name="Squiz.Commenting.VariableComment"/> -->
+        <!-- <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" /> -->
+        <exclude name="Squiz.Files.FileExtension"/>
+        <exclude name='Squiz.NamingConventions.ConstantCase.Found' />
+        <exclude name='Squiz.NamingConventions.ValidFunctionName.NotCamelCaps'/>
+        <exclude name='Squiz.NamingConventions.ValidVariableName.NotCamelCaps' />
+        <exclude name='Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps' />
+        <exclude name='Squiz.NamingConventions.ValidFunctionName.ScopeNotCamelCaps' />
+        <exclude name='Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue' />
+        <exclude name='Squiz.Operators.ComparisonOperatorUsage.NotAllowed' />
+        <exclude name='Squiz.PHP.DisallowInlineIf.Found' />
+        <exclude name='Squiz.PHP.EmbeddedPhp.Indent' />
+        <exclude name='Squiz.PHP.GlobalKeyword.NotAllowed' />
+        <exclude name='Squiz.PHP.DisallowComparisonAssignment.AssignedBool' />
+        <exclude name='Squiz.PHP.DisallowComparisonAssignment.AssignedComparison' />
+        <exclude name='Squiz.PHP.CommentedOutCode.Found' />
+        <!-- <exclude name='Squiz.PHP.DisallowMultipleAssignments.Found' /> -->
+        <exclude name='Squiz.Strings.DoubleQuoteUsage.NotRequired' />
+        <exclude name='Squiz.Strings.ConcatenationSpacing.Missing' />
+        <exclude name='Squiz.WhiteSpace.FunctionSpacing.Before' />
+        <exclude name='Squiz.WhiteSpace.FunctionSpacing.After' />
+        <exclude name='Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose' />
+        <exclude name='Squiz.WhiteSpace.MemberVarSpacing.After' />
+        <exclude name='Squiz.WhiteSpace.OperatorSpacing.NoSpaceAfter' />
+        <exclude name='Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore' />
+        <exclude name='Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore' />
+    </rule>
+
+    <rule ref="Zend">
+         <!-- RC: Personal preference. There is no need for underscores with PHP5 -->
+         <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+         <exclude name="Zend.Files.ClosingTag.NotAllowed "/>
+         <exclude name='Zend.NamingConventions.ValidVariableName.NotCamelCaps' />
+    </rule>
+
+     <rule ref="PEAR">
+        <exclude name='PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps'/>
+        <exclude name="PEAR.Commenting.ClassComment.Missing" />
+        <exclude name="PEAR.Commenting.ClassComment.MissingTag"/>
+        <exclude name="PEAR.Commenting.FileComment.Missing" />
+        <exclude name="PEAR.Commenting.FileComment.MissingTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
+        <exclude name="PEAR.Commenting.FunctionComment.Missing" />
+        <exclude name='PEAR.Commenting.FunctionComment.WrongStyle' />
+        <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+        <exclude name='PEAR.NamingConventions.ValidFunctionName.FunctionNoCapital'/>
+        <!-- Clash with Squiz -->
+        <exclude name='PEAR.Commenting.InlineComment.WrongStyle' />
+        <exclude name='PEAR.Functions.FunctionDeclaration.BraceOnSameLine'/>
+        <exclude name='PEAR.Classes.ClassDeclaration.OpenBraceNewLine' />
+        <exclude name='PEAR.ControlStructures.ControlSignature' />
+        <exclude name='PEAR.WhiteSpace.ScopeClosingBrace.Indent' />
+        <exclude name='PEAR.WhiteSpace.ScopeIndent.Incorrect' />
+        <exclude name='PEAR.WhiteSpace.ScopeClosingBrace.BreakIdent' />
+        <exclude name='PEAR.Commenting.FunctionComment' />
+       </rule>
+
+      <rule ref="WordPress.Arrays.ArrayDeclaration"/>
+      <!-- <rule ref="WordPress.Arrays.ArrayKeySpacingRestrictions"/> -->
+      <!-- <rule ref="WordPress.Classes.ValidClassName"/> -->
+      <!-- <rule ref="WordPress.Files.FileName"/> -->
+      <!-- <rule ref="WordPress.Functions.FunctionCallSignature"/> -->
+      <!-- <rule ref="WordPress.Functions.FunctionDeclarationArgumentSpacing"/> -->
+      <!-- <rule ref="WordPress.NamingConventions.ValidFunctionName"/> -->
+      <!-- <rule ref="WordPress.WhiteSpace.ControlStructureSpacing"/> -->
+      <!-- <rule ref="WordPress.WhiteSpace.OperatorSpacing"/> -->
+      <!-- <rule ref="WordPress.WhiteSpace.PhpIndent"/> -->
+      <!-- <rule ref="WordPress.WhiteSpace.ScopeIndent"/> -->
+      <!-- <rule ref="WordPress.WhiteSpace.CastStructureSpacing"/> -->
+      <rule ref="WordPress.PHP.YodaConditions"/>
+      <rule ref="WordPress.PHP.DiscouragedFunctions"/>
+
+     <rule ref='Generic'>
+        <!-- Unwanted standards -->
+        <exclude name='Generic.NamingConventions.UpperCaseConstantName.ConstantNotUpperCase' />
+        <exclude name='Generic.PHP.UpperCaseConstant' />
+        <exclude name='Generic.WhiteSpace.DisallowSpaceIndent.TabsUsed'/>
+        <exclude name='Generic.Files.EndFileNoNewline.Found' />
+        <exclude name='Generic.Files.OneClassPerFile.MultipleFound' />
+        <exclude name='Generic.NamingConventions.CamelCapsFunctionName.ScopeNotCamelCaps'/>
+        <exclude name='Generic.NamingConventions.CamelCapsFunctionName.NotCamelCaps' />
+        <exclude name='Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine' />
+        <exclude name='Generic.Formatting.MultipleStatementAlignment.NotSame ' />
+        <exclude name='Generic.PHP.CharacterBeforePHPOpeningTag.Found' />
+        <exclude name='Generic.PHP.DisallowShortOpenTag.EchoFound' />
+        <exclude name='Generic.Files.LineLength' />
+        <exclude name='Generic.Formatting.SpaceAfterCast.NoSpace' />
+        <exclude name="Generic.Metrics.CyclomaticComplexity.MaxExceeded" />
+        <exclude name="Generic.Metrics.NestingLevel.MaxExceeded" />
+        <exclude name='Generic.Metrics.NestingLevel.TooHigh' />
+        <exclude name='Generic.Formatting.MultipleStatementAlignment.NotSame' />
+        <exclude name='Generic.CodeAnalysis.EmptyStatement.NotAllowed' />
+        <exclude name='Generic.CodeAnalysis.EmptyStatement.NotAllowedWarning' />
+        <exclude name='Generic.Metrics.CyclomaticComplexity.TooHigh' />
+         <!-- Clashes with other rules -->
+            <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman.BraceOnSameLine" />
+        <exclude name='Generic.PHP.ClosingPHPTag.NotFound' />
+        <exclude name='Generic.WhiteSpace.ScopeIndent.Incorrect' />
+        <!-- Laravel correctly uses inline HTML that generates this error -->
+        <exclude name='Generic.Files.InlineHTML.Found' />
+     </rule>
+     <rule ref="PHPCompatibility">
+     </rule>
+
+     <!-- Global properties -->
+     <!-- Please note that not every sniff uses them and they can be overwritten by rule -->
+     <!-- Paranoya mode: Will generate more alerts but will miss less vulnerabilites. Good for assisting manual code review. -->
+     <config name="ParanoiaMode" value="0"/>
+
+     <!-- BadFunctions -->
+     <!-- PHP functions that can lead to security issues -->
+     <rule ref="Security.BadFunctions.Asserts"/>
+     <rule ref="Security.BadFunctions.Backticks"/>
+     <rule ref="Security.BadFunctions.CallbackFunctions"/>
+     <rule ref="Security.BadFunctions.CryptoFunctions"/>
+     <rule ref="Security.BadFunctions.EasyRFI"/>
+     <rule ref="Security.BadFunctions.EasyXSS">
+      <properties>
+        <!-- Comment out to follow global ParanoiaMode -->
+        <property name="forceParanoia" value="0"/>
+      </properties>
+     </rule>
+     <rule ref="Security.BadFunctions.ErrorHandling"/>
+     <rule ref="Security.BadFunctions.FilesystemFunctions"/>
+     <rule ref="Security.BadFunctions.FringeFunctions"/>
+     <rule ref="Security.BadFunctions.FunctionHandlingFunctions"/>
+     <!-- <rule ref="Security.BadFunctions.Mysqli"/> -->
+     <rule ref="Security.BadFunctions.NoEvals"/>
+     <rule ref="Security.BadFunctions.Phpinfos"/>
+     <rule ref="Security.BadFunctions.PregReplace"/>
+     <rule ref="Security.BadFunctions.SQLFunctions"/>
+     <rule ref="Security.BadFunctions.SystemExecFunctions"/>
+
+     <!-- CVE -->
+     <!-- Entries from CVE database from vendor PHP and bugs.php.net -->
+     <rule ref="Security.CVE.20132110"/>
+     <rule ref="Security.CVE.20134113"/>
+
+
+
+     <!-- <rule ref="A24StudioCS.Commenting.FunctionComment"/> -->
+     <!-- <rule ref="A24StudioCS.Commenting.FileComment"/> -->
+     <!-- <rule ref="A24StudioCS.Commenting.InlineComment"/> -->
+     <!-- <rule ref="A24StudioCS.Commenting.VariableComment"/> -->
+     <!-- <rule ref="A24StudioCS.NamingConventions.ValidVariableName"/> -->
+     <rule ref="A24StudioCS.WhiteSpace.FunctionSpacing"/>
+     <!-- <rule ref="A24StudioCS.WhiteSpace.ScopeClosingBrace"/> -->
+     <rule ref="A24StudioCS.WhiteSpace.ScopeIndent"/>
+     <rule ref="A24StudioCS.Classes.ClassImport"/>
+     <!-- <rule ref="A24StudioCS.Commenting.NamespaceComment"/> -->
+     <rule ref="A24StudioCS.Functions.FunctionCallSignature"/>
+
+     <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
+      <severity>0</severity>
+     </rule>
+     <rule ref="Squiz.Commenting.FunctionComment.Missing">
+      <severity>0</severity>
+     </rule>
+
+     <rule ref="Generic.Files.LineEndings">
+          <properties>
+              <!-- RC: Personal preference. We're using Linux line endings -->
+              <property name="eolChar" value="\n"/>
+          </properties>
+     </rule>
+
+ <!--
+    Boolean values should be specified by using the strings
+    "true" and "false" rather than the integers 0 and 1.
+ -->
+ <rule ref="Generic.Formatting.MultipleStatementAlignment">
+  <properties>
+   <property name="maxPadding" value="8"/>
+   <property name="ignoreMultiLine" value="true"/>
+   <property name="error" value="true"/>
+  </properties>
+ </rule>
+
+ <!--Indent with exactly one char-->
+ <rule ref="Generic.WhiteSpace.ScopeIndent.IncorrectExact">
+     <properties>
+         <property name="indent" value="4"/>
+         <property name="exact" value="true"/>
+     </properties>
+ </rule>
+</ruleset>
