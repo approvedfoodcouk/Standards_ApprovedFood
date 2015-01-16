@@ -89,13 +89,15 @@ class ApprovedFood_Sniffs_Strings_UnnecessaryStringConcatSniff implements PHP_Co
         if ($prev === false || $next === false) {
             return;
         }
-        // check if the concatenation operator its on the end of the line,
+        // check if the concatenation operator its on the start of the line,
         // otherwise we trow an error
-        if ($columnPrevToken > $columnCurrentToken) {
-            $error = 'Line concatenation operator must be at the end of the line';
-            $phpcsFile->addError($error, $stackPtr, 'Found');
+/*
+        if ($columnPrevToken < $columnCurrentToken) {
+            $error = 'Line concatenation operator must be at the start of the line';
+            $phpcsFile->addWarning($error, $stackPtr, 'Found');
             return;
         }
+*/
         $stringTokens = PHP_CodeSniffer_Tokens::$stringTokens;
         if (in_array($tokens[$prev]['code'], $stringTokens) === true && in_array($tokens[$next]['code'], $stringTokens) === true) {
             if ($tokens[$prev]['content'][0] === $tokens[$next]['content'][0]) {

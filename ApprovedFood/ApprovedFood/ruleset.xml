@@ -2,6 +2,7 @@
 <ruleset name="ApprovedFood">
  <description>Approved Food coding standard.</description>
     <rule ref="/_sites/Standards_ApprovedFood/ApprovedFood"/>
+    <rule ref="PSR2" />
 
     <!-- Exclude third party code -->
     <exclude-pattern>*/.git/*</exclude-pattern>
@@ -18,15 +19,22 @@
         <exclude name='Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace' />
         <exclude name='Squiz.CodeAnalysis.EmptyStatement.NotAllowed' />
         <exclude name='Squiz.ControlStructures.ElseIfDeclaration.NotAllowed' />
+        <exclude name='Squiz.ControlStructures.SwitchDeclaration.SpacingAfterBreak' />
         <exclude name="Squiz.Commenting.BlockComment.NoCaptial "/>
         <exclude name="Squiz.Commenting.ClassComment"/>
         <exclude name="Squiz.Commenting.FileComment"/>
+        <exclude name='Squiz.Commenting.VariableComment' />
         <!-- <exclude name="Squiz.Commenting.FunctionComment"/> -->
+        <exclude name='Squiz.Commenting.FunctionComment.ParamCommentFullStop' />
+        <exclude name='Squiz.Commenting.FunctionComment.ShortFullStop' />
+        <exclude name='Squiz.Commenting.FunctionComment.ShortSingleLine' />
+        <exclude name='Squiz.Commenting.FunctionComment.MissingReturn' />
         <exclude name='Squiz.Commenting.FunctionCommentThrowTag.Missing' />
         <exclude name='Squiz.Commenting.InlineComment.InvalidEndChar' />
         <exclude name='Squiz.Commenting.InlineComment.NoSpaceBefore' />
         <exclude name='Squiz.Commenting.InlineComment.NotCapital' />
         <exclude name='Squiz.Commenting.PostStatementComment.Found' />
+
         <!-- <exclude name="Squiz.Commenting.VariableComment"/> -->
         <!-- <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" /> -->
         <exclude name="Squiz.Files.FileExtension"/>
@@ -44,7 +52,6 @@
         <exclude name='Squiz.PHP.DisallowComparisonAssignment.AssignedComparison' />
         <exclude name='Squiz.PHP.CommentedOutCode.Found' />
         <!-- <exclude name='Squiz.PHP.DisallowMultipleAssignments.Found' /> -->
-        <exclude name='Squiz.Strings.DoubleQuoteUsage.NotRequired' />
         <exclude name='Squiz.Strings.ConcatenationSpacing.Missing' />
         <exclude name='Squiz.WhiteSpace.FunctionSpacing.Before' />
         <exclude name='Squiz.WhiteSpace.FunctionSpacing.After' />
@@ -59,7 +66,7 @@
          <!-- RC: Personal preference. There is no need for underscores with PHP5 -->
          <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
          <exclude name="Zend.Files.ClosingTag.NotAllowed "/>
-         <exclude name='Zend.NamingConventions.ValidVariableName.NotCamelCaps' />
+         <exclude name='Zend.NamingConventions.ValidVariableName' />
     </rule>
 
      <rule ref="PEAR">
@@ -69,23 +76,30 @@
         <exclude name="PEAR.Commenting.FileComment.Missing" />
         <exclude name="PEAR.Commenting.FileComment.MissingTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
+        <exclude name="PEAR.Commenting.FileComment"/>
         <exclude name="PEAR.Commenting.FunctionComment.Missing" />
         <exclude name='PEAR.Commenting.FunctionComment.WrongStyle' />
         <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
         <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
         <exclude name='PEAR.NamingConventions.ValidFunctionName.FunctionNoCapital'/>
         <!-- Clash with Squiz -->
+
+        <exclude name='PEAR.ControlStructures.MultiLineCondition.SpaceBeforeOpenBrace' />
+        <exclude name='PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket' />
+        <exclude name='PEAR.Functions.FunctionCallSignature.SpaceBeforeCloseBracket' />
         <exclude name='PEAR.Commenting.InlineComment.WrongStyle' />
+        <exclude name='PEAR.Commenting.ClassComment.WrongStyle' />
         <exclude name='PEAR.Functions.FunctionDeclaration.BraceOnSameLine'/>
         <exclude name='PEAR.Classes.ClassDeclaration.OpenBraceNewLine' />
         <exclude name='PEAR.ControlStructures.ControlSignature' />
         <exclude name='PEAR.WhiteSpace.ScopeClosingBrace.Indent' />
         <exclude name='PEAR.WhiteSpace.ScopeIndent.Incorrect' />
         <exclude name='PEAR.WhiteSpace.ScopeClosingBrace.BreakIdent' />
+        <exclude name='PEAR.WhiteSpace.ScopeClosingBrace.Line' />
         <exclude name='PEAR.Commenting.FunctionComment' />
        </rule>
 
-      <rule ref="WordPress.Arrays.ArrayDeclaration"/>
+      <!-- <rule ref="WordPress.Arrays.ArrayDeclaration"/> -->
       <!-- <rule ref="WordPress.Arrays.ArrayKeySpacingRestrictions"/> -->
       <!-- <rule ref="WordPress.Classes.ValidClassName"/> -->
       <!-- <rule ref="WordPress.Files.FileName"/> -->
@@ -97,7 +111,7 @@
       <!-- <rule ref="WordPress.WhiteSpace.PhpIndent"/> -->
       <!-- <rule ref="WordPress.WhiteSpace.ScopeIndent"/> -->
       <!-- <rule ref="WordPress.WhiteSpace.CastStructureSpacing"/> -->
-      <rule ref="WordPress.PHP.YodaConditions"/>
+      <!-- <rule ref="WordPress.PHP.YodaConditions"/> -->
       <rule ref="WordPress.PHP.DiscouragedFunctions"/>
 
      <rule ref='Generic'>
@@ -112,7 +126,7 @@
         <exclude name='Generic.Functions.OpeningFunctionBraceKernighanRitchie.BraceOnNewLine' />
         <exclude name='Generic.Formatting.MultipleStatementAlignment.NotSame ' />
         <exclude name='Generic.PHP.CharacterBeforePHPOpeningTag.Found' />
-        <exclude name='Generic.PHP.DisallowShortOpenTag.EchoFound' />
+        <exclude name='Generic.PHP.DisallowShortOpenTag' />
         <exclude name='Generic.Files.LineLength' />
         <exclude name='Generic.Formatting.SpaceAfterCast.NoSpace' />
         <exclude name="Generic.Metrics.CyclomaticComplexity.MaxExceeded" />
@@ -151,10 +165,10 @@
       </properties>
      </rule>
      <rule ref="Security.BadFunctions.ErrorHandling"/>
-     <rule ref="Security.BadFunctions.FilesystemFunctions"/>
+     <!-- <rule ref="Security.BadFunctions.FilesystemFunctions"/> -->
      <rule ref="Security.BadFunctions.FringeFunctions"/>
      <rule ref="Security.BadFunctions.FunctionHandlingFunctions"/>
-     <!-- <rule ref="Security.BadFunctions.Mysqli"/> -->
+     <rule ref="Security.BadFunctions.Mysqli"/>
      <rule ref="Security.BadFunctions.NoEvals"/>
      <rule ref="Security.BadFunctions.Phpinfos"/>
      <rule ref="Security.BadFunctions.PregReplace"/>
@@ -173,18 +187,28 @@
      <!-- <rule ref="A24StudioCS.Commenting.InlineComment"/> -->
      <!-- <rule ref="A24StudioCS.Commenting.VariableComment"/> -->
      <!-- <rule ref="A24StudioCS.NamingConventions.ValidVariableName"/> -->
-     <rule ref="A24StudioCS.WhiteSpace.FunctionSpacing"/>
+     <!-- <rule ref="A24StudioCS.WhiteSpace.FunctionSpacing"/> -->
      <!-- <rule ref="A24StudioCS.WhiteSpace.ScopeClosingBrace"/> -->
-     <rule ref="A24StudioCS.WhiteSpace.ScopeIndent"/>
+     <!-- <rule ref="A24StudioCS.WhiteSpace.ScopeIndent"/> -->
      <rule ref="A24StudioCS.Classes.ClassImport"/>
      <!-- <rule ref="A24StudioCS.Commenting.NamespaceComment"/> -->
-     <rule ref="A24StudioCS.Functions.FunctionCallSignature"/>
+     <!-- <rule ref="A24StudioCS.Functions.FunctionCallSignature"/> -->
 
      <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
-      <severity>0</severity>
+      <!-- <severity>0</severity> -->
      </rule>
      <rule ref="Squiz.Commenting.FunctionComment.Missing">
       <severity>0</severity>
+     </rule>
+
+ <!--
+    Severity=3 shouldn't block commits.
+ -->
+     <rule ref="Squiz.Formatting.OperatorBracket.MissingBrackets">
+        <severity>3</severity>
+     </rule>
+     <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired">
+        <severity>3</severity>
      </rule>
 
      <rule ref="Generic.Files.LineEndings">
@@ -213,4 +237,9 @@
          <property name="exact" value="true"/>
      </properties>
  </rule>
+ <!-- Ignore various version control directories. -->
+ <exclude-pattern>*/.git/*</exclude-pattern>
+ <exclude-pattern>*/.svn/*</exclude-pattern>
+ <exclude-pattern>*/.hg/*</exclude-pattern>
+ <exclude-pattern>*/.bzr/*</exclude-pattern>
 </ruleset>
