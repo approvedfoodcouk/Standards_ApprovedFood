@@ -43,6 +43,7 @@
         <exclude name='Squiz.NamingConventions.ValidVariableName.NotCamelCaps' />
         <exclude name='Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps' />
         <exclude name='Squiz.NamingConventions.ValidFunctionName.ScopeNotCamelCaps' />
+        <exclude name='Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore' />
         <exclude name='Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue' />
         <exclude name='Squiz.Operators.ComparisonOperatorUsage.NotAllowed' />
         <exclude name='Squiz.PHP.DisallowInlineIf.Found' />
