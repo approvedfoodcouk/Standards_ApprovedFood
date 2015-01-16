@@ -2,6 +2,7 @@
 <ruleset name="ApprovedFood">
  <description>Approved Food coding standard.</description>
     <rule ref="/_sites/Standards_ApprovedFood/ApprovedFood"/>
+    <!-- PSR2 should be the basic, prefer this in all cases -->
     <rule ref="PSR2" />
 
     <!-- Exclude third party code -->
@@ -43,7 +44,6 @@
         <exclude name='Squiz.NamingConventions.ValidVariableName.NotCamelCaps' />
         <exclude name='Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps' />
         <exclude name='Squiz.NamingConventions.ValidFunctionName.ScopeNotCamelCaps' />
-        <exclude name='Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore' />
         <exclude name='Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue' />
         <exclude name='Squiz.Operators.ComparisonOperatorUsage.NotAllowed' />
         <exclude name='Squiz.PHP.DisallowInlineIf.Found' />
@@ -61,6 +61,10 @@
         <exclude name='Squiz.WhiteSpace.OperatorSpacing.NoSpaceAfter' />
         <exclude name='Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore' />
         <exclude name='Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore' />
+
+        <!-- Disabled due to PSR2 preference -->
+        <exclude name='Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore' />
+        <exclude name='Squiz.ControlStructures.SwitchDeclaration.BreakIndent' />
     </rule>
 
     <rule ref="Zend">
