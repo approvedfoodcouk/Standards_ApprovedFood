@@ -1,9 +1,15 @@
 {
     "preset": "jquery",
+    "fileExtensions": [ ".js", "jscs" ],
+
     "safeContextKeyword": "_this",
     "validateLineBreaks": "LF",
     "validateQuoteMarks": "'",
     "validateIndentation": 2,
     "requireCamelCaseOrUpperCaseIdentifiers": null,
-    "requireMultipleVarDecl": null
+    "requireMultipleVarDecl": null,
+
+    "disallowKeywords": ["with"],
+    "disallowSpacesInsideObjectBrackets": null,
+    "disallowImplicitTypeConversion": ["string"]
 }
