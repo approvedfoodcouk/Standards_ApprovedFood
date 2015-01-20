@@ -10,3 +10,5 @@ Inside you will find configuration files for popular tools including [PHPCS](htt
 To install the Approved Food coding standards clone the `git@github.com:approvedfoodcouk/Standards_ApprovedFood.git` somewhere outside of the _af_web_ code base.
 
 Run the command `install_phpcs.sh` to setup the necessary global configurations & rulesets.
+
+Please also read & use the [Git Commit Message Conventions](https://github.com/approvedfoodcouk/Standards_ApprovedFood/blob/master/docs/git_commit_message_conventions.md)
