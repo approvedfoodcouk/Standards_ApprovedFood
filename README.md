@@ -1,6 +1,8 @@
 Welcome to Approved Group Coding Standards
 ===================================
 
+![acceptance-tests](https://cloud.githubusercontent.com/assets/1629421/5827702/8e8bd5d0-a0f4-11e4-87b4-773b046732bd.png)
+
 These coding standards are used for all Approved Group web-based projects using a variety of tools including.
 
 Inside you will find configuration files for popular tools including [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer), [JSLINT](http://www.jslint.com) and [SCSS-LINT](https://github.com/causes/scss-lint)
