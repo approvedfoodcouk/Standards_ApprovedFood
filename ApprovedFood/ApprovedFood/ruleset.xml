@@ -2,11 +2,16 @@
 <ruleset name="ApprovedFood">
  <description>Approved Food coding standard.</description>
     <rule ref="/_sites/Standards_ApprovedFood/ApprovedFood"/>
-    <!-- PSR2 should be the basic, prefer this in all cases -->
-    <rule ref="PSR2" />
 
     <!-- Exclude third party code -->
     <exclude-pattern>*/.git/*</exclude-pattern>
+
+    <!-- PSR2 should be the basic, prefer this in all cases -->
+    <rule ref="PSR2">
+        <!-- Most AF code is in the global namespace, so this is unachievable -->
+        <exclude name='PSR1.Classes.ClassDeclaration.MissingNamespace' />
+        <exclude name='PSR1.Files.SideEffects.FoundWithSymbols' />
+    </rule>
 
     <!-- Ensure our code is compatibile with latest PHP -->
     <!-- <rule ref='PHPCompatibility'></rule> -->
@@ -15,6 +20,9 @@
         <!-- TEMPORARY while code is brought closer to standards -->
         <!-- Regular standards  -->
         <exclude name='Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned' />
+        <exclude name='Squiz.Arrays.ArrayDeclaration.KeyNotAligned' />
+        <exclude name='Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned' />
+        <exclude name='Squiz.Arrays.ArrayDeclaration.ValueNotAligned' />
         <exclude name="Squiz.Classes.ClassFileName"/>
         <exclude name="Squiz.Classes.ValidClassName"/>
         <exclude name='Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace' />
