@@ -13,8 +13,42 @@
         <exclude name='PSR1.Files.SideEffects.FoundWithSymbols' />
     </rule>
 
+    <rule ref="Drupal">
+        <exclude name='Drupal.NamingConventions' />
+        <exclude name='Drupal.WhiteSpace' />
+        <exclude name='Drupal.Commenting' />
+        <exclude name='Drupal.ControlStructures' />
+        <exclude name='Drupal.Strings' />
+        <exclude name='Drupal.Files' />
+        <exclude name='Drupal.Classes' />
+        <exclude name='Drupal.Semantics' />
+        <exclude name='Drupal.Array' />
+    </rule>
+
+
+    <rule ref="ThinkUp">
+        <!-- Relaxing -->
+        <exclude name='ThinkUp.Commenting.FunctionComment' />
+        <exclude name='ThinkUp.Commenting.FileComment' />
+        <!-- Prefer Squiz -->
+        <exclude name='ThinkUp.Commenting.InlineComment.SpacingAfter' />
+        <!-- Prefer Generic -->
+        <exclude name='ThinkUp.ControlStructures.InlineControlStructure.NotAllowed' />
+        <!-- Never Use -->
+        <exclude name='ThinkUp.Commenting.InlineComment.NoSpaceBefore' />
+        <exclude name='ThinkUp.Commenting.InlineComment.InvalidEndChar' />
+        <exclude name='ThinkUp.Commenting.InlineComment.NotCapital' />
+        <exclude name='ThinkUp.NamingConventions' />
+        <exclude name='ThinkUp.ControlStructures.ElseNewline.ElseNewline' />
+        <exclude name='ThinkUp.Strings.ConcatenationSpacing.Missing' />
+        <exclude name='ThinkUp.WhiteSpace.ScopeIndent.IncorrectExact' />
+        <exclude name='ThinkUp.Commenting.FileComment.Missing' />
+        <exclude name='ThinkUp.Classes.ClassDeclaration' />
+        <exclude name='ThinkUp.Strings.UnnecessaryStringConcat.Found' />
+    </rule>
+
     <!-- Ensure our code is compatibile with latest PHP -->
-    <!-- <rule ref='PHPCompatibility'></rule> -->
+    <rule ref='PHPCompatibility'></rule>
     <!-- Squiz is our main standard. Any clashes from other standards should be excluded -->
     <rule ref="Squiz">
         <!-- TEMPORARY while code is brought closer to standards -->
@@ -25,11 +59,12 @@
         <exclude name='Squiz.Arrays.ArrayDeclaration.ValueNotAligned' />
         <exclude name="Squiz.Classes.ClassFileName"/>
         <exclude name="Squiz.Classes.ValidClassName"/>
+        <exclude name='Squiz.Classes.ClassDeclaration.OpenBraceNewLine' />
         <exclude name='Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace' />
         <exclude name='Squiz.CodeAnalysis.EmptyStatement.NotAllowed' />
         <exclude name='Squiz.ControlStructures.ElseIfDeclaration.NotAllowed' />
         <exclude name='Squiz.ControlStructures.SwitchDeclaration.SpacingAfterBreak' />
-        <exclude name="Squiz.Commenting.BlockComment.NoCaptial "/>
+        <exclude name="Squiz.Commenting.BlockComment.NoCapital"/>
         <exclude name="Squiz.Commenting.ClassComment"/>
         <exclude name="Squiz.Commenting.FileComment"/>
         <exclude name='Squiz.Commenting.VariableComment' />
@@ -42,14 +77,15 @@
         <exclude name='Squiz.Commenting.InlineComment.InvalidEndChar' />
         <exclude name='Squiz.Commenting.InlineComment.NoSpaceBefore' />
         <exclude name='Squiz.Commenting.InlineComment.NotCapital' />
+        <exclude name='Squiz.Commenting.InlineComment.SpacingAfter' />
         <exclude name='Squiz.Commenting.PostStatementComment.Found' />
-
         <!-- <exclude name="Squiz.Commenting.VariableComment"/> -->
         <!-- <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing" /> -->
         <exclude name="Squiz.Files.FileExtension"/>
         <exclude name='Squiz.NamingConventions.ConstantCase.Found' />
         <exclude name='Squiz.NamingConventions.ValidFunctionName.NotCamelCaps'/>
         <exclude name='Squiz.NamingConventions.ValidVariableName.NotCamelCaps' />
+        <exclude name='Squiz.NamingConventions.ValidVariableName.PublicHasUnderscore' />
         <exclude name='Squiz.NamingConventions.ValidVariableName.StringNotCamelCaps' />
         <exclude name='Squiz.NamingConventions.ValidFunctionName.ScopeNotCamelCaps' />
         <exclude name='Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue' />
@@ -93,6 +129,7 @@
         <exclude name="PEAR.Commenting.FunctionComment.Missing" />
         <exclude name='PEAR.Commenting.FunctionComment.WrongStyle' />
         <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+        <exclude name='PEAR.NamingConventions.ValidVariableName.PublicUnderscore' />
         <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
         <exclude name='PEAR.NamingConventions.ValidFunctionName.FunctionNoCapital'/>
         <!-- Clash with Squiz -->
@@ -125,7 +162,7 @@
       <!-- <rule ref="WordPress.WhiteSpace.ScopeIndent"/> -->
       <!-- <rule ref="WordPress.WhiteSpace.CastStructureSpacing"/> -->
       <!-- <rule ref="WordPress.PHP.YodaConditions"/> -->
-      <rule ref="WordPress.PHP.DiscouragedFunctions"/>
+      <!-- <rule ref="WordPress.PHP.DiscouragedFunctions"/> -->
 
      <rule ref='Generic'>
         <!-- Unwanted standards -->

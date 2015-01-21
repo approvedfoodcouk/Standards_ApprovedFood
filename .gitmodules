@@ -17,3 +17,7 @@
 [submodule "WPCS"]
     path = wpcs
     url = https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git
+
+[submodule "thinkup-codesniffer"]
+	path = thinkup-codesniffer
+	url = https://github.com/sarcas/ThinkUp-CodeSniffer.git
