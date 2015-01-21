@@ -1,0 +1,19 @@
+[submodule "a24/A24StudioCS"]
+    path = a24/A24StudioCS
+    url = git://github.com:A24Group/A24StudioCS.git
+
+[submodule "phpcompat/PHPCompatibility"]
+    path = phpcompat/PHPCompatibility
+    url = git://github.com:wimg/PHPCompatibility.git
+
+[submodule "cakephp-codesniffer"]
+    path = cakephp-codesniffer
+    url = git://github.com:cakephp/cakephp-codesniffer.git
+
+[submodule "phpcs-security-audit"]
+    path = phpcs-security-audit
+    url = git://github.com:Pheromone/phpcs-security-audit.git
+
+[submodule "WPCS"]
+    path = wpcs
+    url = https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git
