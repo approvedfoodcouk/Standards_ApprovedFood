@@ -13,4 +13,21 @@ To install the Approved Food coding standards clone the `git@github.com:approved
 
 Run the command `install_phpcs.sh` to setup the necessary global configurations & rulesets.
 
+TODO: Move towards `composer` to hand git dependancies
+
 Please also read & use the [Git Commit Message Conventions](https://github.com/approvedfoodcouk/Standards_ApprovedFood/blob/master/docs/git_commit_message_conventions.md)
+
+## Notes
+
+### PHP Compatibility stand-alone testing
+
+It can be useful to check a bunch of code for potential issues and it is possibly to expose PHP version issues with a single command.
+
+`phpcs -l --standard=PHPCompatibility --extensions=php --runtime-set testVersion 5.4 .`
+
+**Where:**
+* `-l`  local directory only
+* `--standard=PHPCompatibility` the standard itself
+* `--extensions=php` file extensions, you may want to add `htm` if you have embedded php inside html files
+* `--runtime-set testVersion 5.4` - specify the version of PHP to test for, typically the one your migrating towards
+* `.` the directory to test inside, i.e., the current directory
