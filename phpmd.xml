@@ -16,17 +16,6 @@
     <rule ref="rulesets/unusedcode.xml" />
 
 
-    <!-- Naming rules -->
-    <!-- Class constructors should be __construct -->
-    <rule ref="rulesets/naming.xml/ConstructorWithNameAsEnclosingClass" />
-    <!-- Method minimum length (3) -->
-    <!-- <rule ref="rulesets/naming.xml/ShortMethodName" /> -->
-    <!-- Boolean method should be of the form isX() or hasX() -->
-    <rule ref="rulesets/naming.xml/BooleanGetMethodName" />
-    <!-- Variable minimum length (3), doesn't count variables in for statements -->
-    <rule ref="rulesets/naming.xml/ShortVariable" />
-
-
     <!-- Design rules -->
     <!-- Arbitrary exit code -->
     <!-- Eval expressions -->
@@ -36,20 +25,33 @@
     <!-- Excessive class dependencies (13) -->
     <rule ref="rulesets/design.xml" />
 
+    <!-- SP: Code relies upon high level $_SERVER, $_GET, etc. -->
+    <!-- SP: Much of our legacy code breaks naming conventions -->
+    <!-- SP: Use PHPCS /JSHINT to set style standards -->
+
+
+    <!-- Naming rules -->
+    <!-- Class constructors should be __construct -->
+    <!-- <rule ref="rulesets/naming.xml/ConstructorWithNameAsEnclosingClass" /> -->
+    <!-- Method minimum length (3) -->
+    <!-- <rule ref="rulesets/naming.xml/ShortMethodName" /> -->
+    <!-- Boolean method should be of the form isX() or hasX() -->
+    <!-- <rule ref="rulesets/naming.xml/BooleanGetMethodName" /> -->
+
 
     <!-- Controversial rules -->
     <!-- Avoid superglobals -->
-    <rule ref="rulesets/controversial.xml/Superglobals" />
+    <!-- <rule ref="rulesets/controversial.xml/Superglobals" /> -->
     <!-- Use camelCase class name-->
-    <rule ref="rulesets/controversial.xml/CamelCaseClassName" />
+    <!-- <rule ref="rulesets/controversial.xml/CamelCaseClassName" /> -->
     <!-- Use camelCase class attribute names -->
-    <rule ref="rulesets/controversial.xml/CamelCasePropertyName" />
+    <!-- <rule ref="rulesets/controversial.xml/CamelCasePropertyName" /> -->
     <!-- Use camelCase class method names -->
-    <rule ref="rulesets/controversial.xml/CamelCaseMethodName" />
+    <!-- <rule ref="rulesets/controversial.xml/CamelCaseMethodName" /> -->
     <!-- Use camelCase class method parameter names -->
-    <rule ref="rulesets/controversial.xml/CamelCaseParameterName" />
+    <!-- <rule ref="rulesets/controversial.xml/CamelCaseParameterName" /> -->
     <!-- Use camelCase class method variable names -->
-    <rule ref="rulesets/controversial.xml/CamelCaseVariableName" />
+    <!-- <rule ref="rulesets/controversial.xml/CamelCaseVariableName" /> -->
 
 
     <!-- Code size rules -->
