@@ -1,6 +1,7 @@
 {
-    "name": "approved/approved",
+    "name": "approvedfoodcouk/Standards_ApprovedFood",
     "description": "Approved Food are belong to us",
+    "version": "1.0.0",
     "license": "proprietary",
     "authors": [
         {
@@ -9,18 +10,17 @@
             "role": "Developer"
         }
     ],
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/approvedfoodcouk/Standards_ApprovedFood"
+     }],
     "require": {
         "php": ">=5.3.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
         "cubesolutions/phpconsistent": "dev-master",
-        "A24Group/A24StudioCS": "*",
-        "cakephp/cakephp-codesniffer": "*",
-        "Pheromone/phpcs-security-audit": "*",
-        "sarcas/ThinkUp-CodeSniffer": "*",
-        "wimg/php-compatibility": "dev-master",
-        "WordPress-Coding-Standards/WordPress-Coding-Standards": "*"
+        "cakephp/cakephp-codesniffer": "*"
     },
     "minimum-stability": "stable"
 }
