@@ -13,10 +13,6 @@
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
 
-if (class_exists('PHP_CodeSniffer_CommentParser_ClassCommentParser', true) === false) {
-    throw new PHP_CodeSniffer_Exception('Class PHP_CodeSniffer_CommentParser_ClassCommentParser not found');
-}
-
 /**
  * Parses and verifies the file doc comment.
  *
@@ -174,13 +170,15 @@ class ApprovedFood_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer
         $commentString = $phpcsFile->getTokensAsString($commentStart, ($commentEnd - $commentStart + 1));
 
         // Parse the header comment docblock.
-        try {
-            $this->commentParser = new PHP_CodeSniffer_CommentParser_ClassCommentParser($commentString, $phpcsFile);
-            $this->commentParser->parse();
-        } catch (PHP_CodeSniffer_CommentParser_ParserException $e) {
-            $line = ($e->getLineWithinComment() + $commentStart);
-            $phpcsFile->addError($e->getMessage(), $line, 'Exception');
-            return;
+        if (class_exists('PHP_CodeSniffer_CommentParser_ClassCommentParser', true) === true) {
+            try {
+                $this->commentParser = new PHP_CodeSniffer_CommentParser_ClassCommentParser($commentString, $phpcsFile);
+                $this->commentParser->parse();
+            } catch (PHP_CodeSniffer_CommentParser_ParserException $e) {
+                $line = ($e->getLineWithinComment() + $commentStart);
+                $phpcsFile->addError($e->getMessage(), $line, 'Exception');
+                return;
+            }
         }
 
         $comment = $this->commentParser->getComment();
