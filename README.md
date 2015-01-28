@@ -19,6 +19,23 @@ Please also read & use the [Git Commit Message Conventions](https://github.com/a
 
 ## Notes
 
+### Commenting out code without breaking standards
+
+When commenting out blocks of code, Standards will often tell you everything is wrong with it. This code can be exlcluded by wrapping it in `// @codingStandardsIgnoreStart` and `// @codingStandardsIgnoreEnd` to inform the checkers to ignore this code.
+
+**NOTE:** This is only acceptable for commented out code! Don't use it because you don't intend to fix the code.
+
+``` php
+// @codingStandardsIgnoreStart
+/*
+    $sql = 'SELECT distro_countries.* FROM distro_countries INNER JOIN distro_groups ON distro_groups.ID=group_id AND distro_groups.biz_id='.$GLOBALS['BUSINESS_ID'].' WHERE DISABLED=0 AND distro_countries.country_id='.$cont_id;
+    $rs = DB::query($sql);
+    $country = DB::fetch($rs);
+    if (DB::numRows($rs)) { $country_invalid = false; }
+*/
+// @codingStandardsIgnoreEnd
+```
+
 ### PHP Compatibility stand-alone testing
 
 It can be useful to check a bunch of code for potential issues and it is possibly to expose PHP version issues with a single command.
