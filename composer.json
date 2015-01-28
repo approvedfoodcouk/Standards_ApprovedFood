@@ -22,5 +22,9 @@
         "cubesolutions/phpconsistent": "dev-master",
         "cakephp/cakephp-codesniffer": "*"
     },
-    "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "scripts": {
+    "post-install-cmd": ["bash install_phpcs.sh"],
+    "post-update-cmd": ["bash install_phpcs.sh"]
+  }
 }
