@@ -11,5 +11,7 @@
 
     "disallowKeywords": ["with"],
     "disallowSpacesInsideObjectBrackets": null,
+    "requireSpacesInsideArrayBrackets": null,
+    "requireSpacesInsideObjectBrackets": null,
     "disallowImplicitTypeConversion": ["string"]
 }
