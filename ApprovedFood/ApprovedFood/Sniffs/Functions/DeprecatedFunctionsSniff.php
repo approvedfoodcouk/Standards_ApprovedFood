@@ -175,6 +175,24 @@ class ApprovedFood_Sniffs_Functions_DeprecatedFunctionsSniff extends Generic_Sni
       'floatval'                 => 'type cast (float)', // type casting should be used instead
       'strval'                   => 'type cast (string)', // type casting should be used instead
       'intval'                   => 'type cast (int)', // type casting should be used instead
+
+      //  configuration changes
+        'set_include_path' => null,
+        'restore_include_path' => null,
+        'get_include_path' => null,
+        'ini_set' => null,
+        'ini_restore' => null,
+        'ini_get' => null,
+        'ini_get_all' => null,
+        'ini_alter' => null,
+        'get_cfg_var' => null,
+
+        // Shell interaction
+        'exec' => null,
+        'shell_exec' => null,
+        'popen' => null,
+        'system' => null,
+        'passthru' => null,
     );
 
     /**
