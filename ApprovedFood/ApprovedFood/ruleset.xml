@@ -39,20 +39,22 @@
         <!-- Prefer Generic -->
         <exclude name='ThinkUp.ControlStructures.InlineControlStructure.NotAllowed' />
         <!-- Never Use -->
-        <exclude name='ThinkUp.Commenting.InlineComment.NoSpaceBefore' />
-        <exclude name='ThinkUp.Commenting.InlineComment.InvalidEndChar' />
-        <exclude name='ThinkUp.Commenting.InlineComment.NotCapital' />
-        <exclude name='ThinkUp.NamingConventions' />
-        <exclude name='ThinkUp.ControlStructures.ElseNewline.ElseNewline' />
-        <exclude name='ThinkUp.Strings.ConcatenationSpacing.Missing' />
-        <exclude name='ThinkUp.WhiteSpace.ScopeIndent.IncorrectExact' />
-        <exclude name='ThinkUp.Commenting.FileComment.Missing' />
         <exclude name='ThinkUp.Classes.ClassDeclaration' />
+        <exclude name='ThinkUp.Classes.PrivateKeyword' />
+        <exclude name='ThinkUp.Classes.VarKeyword.VarKeyword' />
+        <exclude name='ThinkUp.Commenting.FileComment.Missing' />
+        <exclude name='ThinkUp.Commenting.InlineComment.InvalidEndChar' />
+        <exclude name='ThinkUp.Commenting.InlineComment.NoSpaceBefore' />
+        <exclude name='ThinkUp.Commenting.InlineComment.NotCapital' />
+        <exclude name='ThinkUp.ControlStructures.ElseNewline.ElseNewline' />
+        <exclude name='ThinkUp.NamingConventions' />
+        <exclude name='ThinkUp.Semantics.PregSecurity.PregEFlag' />
+        <exclude name='ThinkUp.Semantics.RemoteAddress' />
+        <exclude name='ThinkUp.Strings.ConcatenationSpacing.Missing' />
         <exclude name='ThinkUp.Strings.UnnecessaryStringConcat.Found' />
         <exclude name='ThinkUp.WhiteSpace.ScopeClosingBrace.BreakIdent' />
         <exclude name='ThinkUp.WhiteSpace.ScopeClosingBrace.Indent' />
-        <exclude name='ThinkUp.Semantics.RemoteAddress' />
-        <exclude name='ThinkUp.Classes.PrivateKeyword' />
+        <exclude name='ThinkUp.WhiteSpace.ScopeIndent.IncorrectExact' />
     </rule>
 
     <!-- Ensure our code is compatibile with latest PHP -->
@@ -70,7 +72,7 @@
         <exclude name="Squiz.Commenting.FileComment.@subpackageTagOrder"/>
         <exclude name="Squiz.Commenting.FileComment.IncorrectAuthor"/>
         <exclude name="Squiz.Commenting.FileComment.IncorrectCopyright"/>
-        <exclude name="Squiz.Commenting.ClassComment"/>
+        <!-- <exclude name="Squiz.Commenting.ClassComment"/> -->
         <exclude name="Squiz.Files.FileExtension"/>
         <exclude name='Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned' />
         <exclude name='Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned' />
@@ -79,11 +81,11 @@
         <exclude name='Squiz.Classes.ClassDeclaration.EndFileAfterCloseBrace' />
         <exclude name='Squiz.Classes.ClassDeclaration.OpenBraceNewLine' />
         <exclude name='Squiz.CodeAnalysis.EmptyStatement.NotAllowed' />
-        <exclude name='Squiz.Commenting.FunctionComment.MissingReturn' />
+        <!-- <exclude name='Squiz.Commenting.FunctionComment.MissingReturn' /> -->
         <exclude name='Squiz.Commenting.FunctionComment.ParamCommentFullStop' />
         <exclude name='Squiz.Commenting.FunctionComment.ShortFullStop' />
-        <exclude name='Squiz.Commenting.FunctionComment.ShortSingleLine' />
-        <exclude name='Squiz.Commenting.FunctionCommentThrowTag.Missing' />
+        <!-- <exclude name='Squiz.Commenting.FunctionComment.ShortSingleLine' /> -->
+        <!-- <exclude name='Squiz.Commenting.FunctionCommentThrowTag.Missing' /> -->
         <exclude name='Squiz.Commenting.InlineComment.InvalidEndChar' />
         <exclude name='Squiz.Commenting.InlineComment.NoSpaceBefore' />
         <exclude name='Squiz.Commenting.InlineComment.NotCapital' />
@@ -119,6 +121,8 @@
         <!-- Disabled due to PSR2 preference -->
         <exclude name='Squiz.NamingConventions.ValidFunctionName.PrivateNoUnderscore' />
         <exclude name='Squiz.ControlStructures.SwitchDeclaration.BreakIndent' />
+        <exclude name='Squiz.Classes.ClassDeclaration.MultipleClasses' />
+        <exclude name='Squiz.Scope.MemberVarScope.Missing' />
     </rule>
 
     <rule ref="Zend">
@@ -129,15 +133,10 @@
     </rule>
 
      <rule ref="PEAR">
+        <exclude name="PEAR.Commenting.ClassComment" />
+        <exclude name="PEAR.Commenting.FileComment" />
+        <exclude name="PEAR.Commenting.FunctionComment" />
         <exclude name='PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps'/>
-        <exclude name="PEAR.Commenting.ClassComment.Missing" />
-        <exclude name="PEAR.Commenting.ClassComment.MissingTag"/>
-        <exclude name="PEAR.Commenting.FileComment.Missing" />
-        <exclude name="PEAR.Commenting.FileComment.MissingTag"/>
-        <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
-        <exclude name="PEAR.Commenting.FileComment"/>
-        <exclude name="PEAR.Commenting.FunctionComment.Missing" />
-        <exclude name='PEAR.Commenting.FunctionComment.WrongStyle' />
         <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
         <exclude name='PEAR.NamingConventions.ValidVariableName.PublicUnderscore' />
         <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
@@ -157,7 +156,6 @@
         <exclude name='PEAR.WhiteSpace.ScopeIndent.Incorrect' />
         <exclude name='PEAR.WhiteSpace.ScopeClosingBrace.BreakIdent' />
         <exclude name='PEAR.WhiteSpace.ScopeClosingBrace.Line' />
-        <exclude name='PEAR.Commenting.FunctionComment' />
         <exclude name='PEAR.NamingConventions.ValidFunctionName.PublicUnderscore' />
         <exclude name='PEAR.Formatting.MultiLineAssignment.Indent' />
        </rule>
@@ -207,6 +205,7 @@
         <exclude name='Generic.WhiteSpace.ScopeIndent.IncorrectExact' />
         <!-- Laravel correctly uses inline HTML that generates this error -->
         <exclude name='Generic.Files.InlineHTML.Found' />
+        <exclude name='Generic.Files.LowercasedFilename.NotFound' />
      </rule>
      <rule ref="PHPCompatibility">
      </rule>
@@ -294,11 +293,13 @@
    <property name="error" value="true"/>
   </properties>
  </rule>
- <rule ref="Generic.Files.LowercasedFilename.NotFound">
+ <rule ref='ApprovedFood.Files.FileName'>
     <!-- Legacy: non-conforming file -->
-    <type>warn</type>
-    <exclude-pattern>indexPage4b.php</exclude-pattern>
-    <exclude-pattern>loginTest.php</exclude-pattern>
+    <exclude-pattern>indexPage4-201403.php</exclude-pattern>
+    <!-- Shared links that cannout change -->
+    <exclude-pattern>user-debug.php</exclude-pattern>
+    <exclude-pattern>debug-headers.php</exclude-pattern>
+    <exclude-pattern>post-capture.php</exclude-pattern>
  </rule>
  <rule ref="PEAR.NamingConventions.ValidClassName.StartWithCapital">
     <!-- Legacy: non-conforming file -->
