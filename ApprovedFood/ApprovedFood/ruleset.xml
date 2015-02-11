@@ -175,6 +175,13 @@
       <!-- <rule ref="WordPress.PHP.YodaConditions"/> -->
       <!-- <rule ref="WordPress.PHP.DiscouragedFunctions"/> -->
 
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+    <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+
      <rule ref='Generic'>
         <!-- Unwanted standards -->
         <exclude name="Generic.Metrics.CyclomaticComplexity.MaxExceeded" />

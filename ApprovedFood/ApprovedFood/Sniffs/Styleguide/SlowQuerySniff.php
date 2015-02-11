@@ -13,7 +13,8 @@ class ApprovedFood_Sniffs_Styleguide_SlowQuerySniff implements PHP_CodeSniffer_S
       'ALTER TABLE',
       'CREATE TABLE',
       'DROP DATABASE',
-      'DROP TABLE'
+      'DROP TABLE',
+      'TRUNCATE',
     );
 
     protected function getStrTokens()
