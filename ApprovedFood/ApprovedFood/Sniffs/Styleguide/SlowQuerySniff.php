@@ -10,8 +10,10 @@ class ApprovedFood_Sniffs_Styleguide_SlowQuerySniff implements PHP_CodeSniffer_S
     );
 
     public $forbiddenStatements = array(
-      'ALTER',
-      'DROP'
+      'ALTER TABLE',
+      'CREATE TABLE',
+      'DROP DATABASE',
+      'DROP TABLE'
     );
 
     protected function getStrTokens()
