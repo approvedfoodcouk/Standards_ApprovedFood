@@ -1,3 +1,25 @@
 #!/bin/sh
 sudo phpcs --config-set tab_width 4
-sudo phpcs --config-set installed_paths  /_sites/Standards_ApprovedFood/ApprovedFood,/_sites/Standards_ApprovedFood/wpcs,/_sites/Standards_ApprovedFood/phpcompat,/_sites/Standards_ApprovedFood/a24,/_sites/Standards_ApprovedFood/phpcs-security-audit,/_sites/Standards_ApprovedFood/thinkup-codesniffer,/_sites/Standards_ApprovedFood/drupalcs
+
+PHPCS_PACKAGES=(
+    'ApprovedFood'
+    'wpcs'
+    'phpcompat'
+    'a24'
+    'phpcs-security-audit'
+    'thinkup-codesniffer'
+    'drupalcs'
+    # 'vendor/fluidtypo3/code-standards'
+    'vendor/cakephp/cakephp-codesniffer/CakePHP'
+)
+
+PATH_PRE=$(pwd)
+RULES=""
+PRE=""
+for package in "${PHPCS_PACKAGES[@]}"
+do
+    RULES="${RULES}${PRE}${PATH_PRE}/${package}"
+    PRE=","
+done
+
+phpcs --config-set installed_paths "${RULES}"

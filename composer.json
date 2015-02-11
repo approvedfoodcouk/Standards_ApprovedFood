@@ -20,6 +20,7 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
         "cubesolutions/phpconsistent": "dev-master",
+        "fluidtypo3/coding-standards": "*",
         "cakephp/cakephp-codesniffer": "*"
     },
   "minimum-stability": "stable",
