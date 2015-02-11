@@ -11,6 +11,13 @@ class ApprovedFood_Sniffs_Functions_DatabaseFunctionSniff implements PHP_CodeSni
         'SELECT' => array('replace' => 'alternatives DB::getrow or DB::getvar'),
         );
     
+    public $regex_delete = '/DELETE\s+(LOW_PRIORITY\s+)?(QUICK\s+)?(IGNORE\s+)?FROM\s+/i';
+    public $regex_insert = '/INSERT\s+((LOW_PRIORITY|DELAYED|HIGH_PRIORITY)\s+)?(IGNORE\s+)?INTO\s+/i';
+    public $regex_select = array('/SELECT\s+.+\s+FROM\s+/i', '/SELECT\s+(.+\s+)+FROM\s+/i');
+    public $regex_select_approx = '/SELECT\s+/i';
+    public $regex_update  = array('/(?<!ON)\s*UPDATE\s+.+\s+SET\s+/i', '/(?<!ON)\s*UPDATE\s+(.+\s+)+SET\s+/i');
+    public $regex_update_approx = '/(?<!ON)\s*UPDATE\s+/i';
+
     /**
     * Returns the token types that this sniff is interested in.
     *
