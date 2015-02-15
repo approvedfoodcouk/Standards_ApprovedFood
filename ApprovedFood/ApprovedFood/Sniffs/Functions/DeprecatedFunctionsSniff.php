@@ -52,32 +52,32 @@ class ApprovedFood_Sniffs_Functions_DeprecatedFunctionsSniff extends Generic_Sni
       'is_writeable'    => 'is_writable', # odd alias, not deprecated (http://www.dict.cc/?s=writable)
 
       # 3) Discourages the use of PHP debugging functions
-      'print_r'          => null,
-      'var_dump'         => null,
-      'error_log'        => null,
+      // 'print_r'          => null,
+      // 'var_dump'         => null,
+      // 'error_log'        => null,
 
-       # 4) Discourages the use of normal string functions, thereby enforces the usage of mbstring functions
-      'strcut'          => 'mb_strcut',       # Get part of string
-      'trimwidth'       => 'mb_strimwidth',   # Get truncated string with specified width
-      'stripos'         => 'mb_stripos',      # Finds position of first occurrence of a string within another, case insensitive
-      'stristr'         => 'mb_stristr',      # Finds first occurrence of a string within another, case insensitive
-      'strlen'          => 'mb_strlen',       # Get string length
-      'strpos'          => 'mb_strpos',       # Find position of first occurrence of string in a string
-      'strrchr'         => 'mb_strrichr',     # Finds the last occurrence of a character in a string within another, case insensitive
-      'strripos'        => 'mb_strripos',     # Finds position of last occurrence of a string within another, case insensitive
-      'strrpos'         => 'mb_strrpos',      # Find position of last occurrence of a string in a string
-      'strstr'          => 'mb_strstr',       # Finds first occurrence of a string within another
-      'strtolower'      => 'mb_strtolower',   # Make a string lowercase
-      'strtoupper'      => 'mb_strtoupper',   # Make a string uppercase
-      'strwidth'        => 'mb_strwidth',     # Return width of string
-      'substr_count'    => 'mb_substr_count', # Count the number of substring occurrences
-      'substr'          => 'mb_substr',       # Get part of string
-      # 4b) Discourages the use of odd multi-bytes string aliases
-      'mbstrcut'        => 'mb_strcut',
-      'mbstrlen'        => 'mb_strlen',
-      'mbstrpos'        => 'mb_strpos',
-      'mbstrrpos'       => 'mb_strrpos',
-      'mbsubstr'        => 'mb_substr',
+      //  # 4) Discourages the use of normal string functions, thereby enforces the usage of mbstring functions
+      // 'strcut'          => 'mb_strcut',       # Get part of string
+      // 'trimwidth'       => 'mb_strimwidth',   # Get truncated string with specified width
+      // 'stripos'         => 'mb_stripos',      # Finds position of first occurrence of a string within another, case insensitive
+      // 'stristr'         => 'mb_stristr',      # Finds first occurrence of a string within another, case insensitive
+      // 'strlen'          => 'mb_strlen',       # Get string length
+      // 'strpos'          => 'mb_strpos',       # Find position of first occurrence of string in a string
+      // 'strrchr'         => 'mb_strrichr',     # Finds the last occurrence of a character in a string within another, case insensitive
+      // 'strripos'        => 'mb_strripos',     # Finds position of last occurrence of a string within another, case insensitive
+      // 'strrpos'         => 'mb_strrpos',      # Find position of last occurrence of a string in a string
+      // 'strstr'          => 'mb_strstr',       # Finds first occurrence of a string within another
+      // 'strtolower'      => 'mb_strtolower',   # Make a string lowercase
+      // 'strtoupper'      => 'mb_strtoupper',   # Make a string uppercase
+      // 'strwidth'        => 'mb_strwidth',     # Return width of string
+      // 'substr_count'    => 'mb_substr_count', # Count the number of substring occurrences
+      // 'substr'          => 'mb_substr',       # Get part of string
+      // # 4b) Discourages the use of odd multi-bytes string aliases
+      // 'mbstrcut'        => 'mb_strcut',
+      // 'mbstrlen'        => 'mb_strlen',
+      // 'mbstrpos'        => 'mb_strpos',
+      // 'mbstrrpos'       => 'mb_strrpos',
+      // 'mbsubstr'        => 'mb_substr',
 
       # 5) Discourages the use of ereg-functions in general = no ereg*() and no mb_ereg_*()
       'ereg'              => 'preg_match',

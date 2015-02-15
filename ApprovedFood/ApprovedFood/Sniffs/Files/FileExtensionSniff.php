@@ -15,16 +15,15 @@ class ApprovedFood_Sniffs_Files_FileExtensionSniff  implements PHP_CodeSniffer_S
     }
     $fileName  = $phpcsFile->getFileName();
     $nextClass = $phpcsFile->findNext(array(T_CLASS, T_INTERFACE), $stackPtr);
-    if (false !== strpos($fileName, '.class.php'))
+
+    if (preg_match('/class\.(.*)\.php/i', $fileName))
     {
       if ($nextClass === false)
       {
         $error = 'No interface or class found in ".class.php" file; use ".php" extension instead';
         $phpcsFile->addError($error, $stackPtr);
       }
-    }
-    elseif (false !== strpos($fileName, '.php'))
-    {
+    } elseif (!preg_match('/class\.(.*)\.php/i', $fileName)) {
       if ($nextClass !== false && false === strpos($fileName, 'model'))
       {
         $error = 'Use ".class.php" extension for the class file';
