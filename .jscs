@@ -10,8 +10,10 @@
     "requireMultipleVarDecl": null,
 
     "disallowKeywords": ["with"],
-    "disallowSpacesInsideObjectBrackets": null,
+    "disallowSpacesInsideObjectBrackets": true,
     "requireSpacesInsideArrayBrackets": null,
     "requireSpacesInsideObjectBrackets": null,
-    "disallowImplicitTypeConversion": ["string"]
+    "requireSpacesInsideParentheses": null,
+    "disallowSpacesInsideParentheses": true,
+    "disallowImplicitTypeConversion": ["string"],
 }
