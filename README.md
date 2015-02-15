@@ -40,7 +40,7 @@ When commenting out blocks of code, Standards will often tell you everything is 
 
 It can be useful to check a bunch of code for potential issues and it is possibly to expose PHP version issues with a single command.
 
-`phpcs -l --standard=PHPCompatibility --extensions=php --runtime-set testVersion 5.4 .`
+`phpcs -l --standard=PHPCompatibility --extensions=php --runtime-set testVersion 5.6 .`
 
 **Where:**
 * `-l`  local directory only
