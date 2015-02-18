@@ -16,6 +16,7 @@ class ApprovedFood_Sniffs_Functions_DeprecatedFunctionsSniff extends Generic_Sni
     public $forbiddenFunctions = array(
       'DB::insert' => 'DB::insertArray',
       'DB::update' => 'DB::updateArray',
+      'DB::result' => 'DB::getvar',
       // aliases
       'call_user_method'         => 'call_user_func',
       'call_user_method_array'   => 'call_user_func_array',
