@@ -21,9 +21,12 @@ class ApprovedFood_Sniffs_Styleguide_LanguageConstructsSniff implements PHP_Code
         // handle all types
         switch($current['code'])
         {
-            // echo and print should have a whitespace after the keyword and no parenthesis
-            case T_ECHO:
             case T_PRINT:
+                $phpcsFile->addError('User "echo" in place of "print"', $stackPtr);
+                break;
+
+            // echo should have a whitespace after the keyword and no parenthesis
+            case T_ECHO:
                 if($next['content'] != ' ')
                 {
                     $phpcsFile->addError('After "echo", "print" we expect exactly one space.', $stackPtr);
