@@ -22,7 +22,6 @@
         "cubesolutions/phpconsistent": "dev-master",
         "fluidtypo3/coding-standards": "*",
         "cakephp/cakephp-codesniffer": "*",
-        "wimg/php-compatibility": "dev-master",
         "simplyadmire/composer-plugins" : "@dev"
     },
   "minimum-stability": "stable",
