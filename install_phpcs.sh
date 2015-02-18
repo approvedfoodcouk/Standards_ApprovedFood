@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 sudo phpcs --config-set tab_width 4
 
 PHPCS_PACKAGES=(
@@ -13,7 +13,16 @@ PHPCS_PACKAGES=(
     'vendor/cakephp/cakephp-codesniffer/CakePHP'
 )
 
-PATH_PRE=$(pwd)
+PWD=$(pwd)
+echo "Using rule parent directory ${PWD}"
+
+BASEDIR=$(dirname $0)
+echo "Script location: ${BASEDIR}"
+
+PATH_PRE="${PWD}/${BASEDIR}"
+echo "Standards home: ${PATH_PRE}"
+
+
 RULES=""
 PRE=""
 for package in "${PHPCS_PACKAGES[@]}"
