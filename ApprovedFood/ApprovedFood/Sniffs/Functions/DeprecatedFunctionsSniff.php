@@ -194,6 +194,11 @@ class ApprovedFood_Sniffs_Functions_DeprecatedFunctionsSniff extends Generic_Sni
         'popen' => null,
         'system' => null,
         'passthru' => null,
+
+        // Code climate - Security
+        'parse_str' => null,
+        'sleep' => null,
+        'usleep' => null,
     );
 
     /**
