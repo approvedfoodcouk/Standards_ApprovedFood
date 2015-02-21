@@ -114,8 +114,11 @@ class ApprovedFood_Sniffs_Commenting_FileCommentSniff implements PHP_CodeSniffer
         } else if ($tokens[$commentStart]['code'] === T_COMMENT) {
             $phpcsFile->addError('You must use "/**" style comments for a file comment', $errorToken, 'WrongStyle');
             return;
-        } else if ($commentStart === false || $tokens[$commentStart]['code'] !== T_DOC_COMMENT) {
-            $phpcsFile->addError('Missing file doc comment', $errorToken, 'Missing');
+        } else if ($commentStart === false) {
+            $phpcsFile->addError('Missing file doc comment. No start found.', $errorToken, 'Missing');
+            return;
+        } else if ($tokens[$commentStart]['code'] !== T_DOC_COMMENT) {
+            $phpcsFile->addError('Missing file doc comment. Found non-comment.'.$tokens[$commentStart]['code'], $errorToken, 'Missing');
             return;
         }
 
