@@ -22,7 +22,8 @@
         "cubesolutions/phpconsistent": "dev-master",
         "fluidtypo3/coding-standards": "*",
         "cakephp/cakephp-codesniffer": "*",
-        "simplyadmire/composer-plugins" : "@dev"
+        "simplyadmire/composer-plugins" : "@dev",
+        "wp-coding-standards/wpcs" : "dev-master"
     },
   "minimum-stability": "stable",
   "scripts": {

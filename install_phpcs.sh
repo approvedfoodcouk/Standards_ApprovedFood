@@ -6,13 +6,13 @@ sudo phpcs --config-set tab_width 4
 
 PHPCS_PACKAGES=(
     'ApprovedFood'
-    'wpcs'
     'phpcompat'
     'a24'
     'phpcs-security-audit'
     'thinkup-codesniffer'
     'drupalcs'
     # 'vendor/fluidtypo3/code-standards'
+    'vendor/wp-coding-standards/wpcs'
     'vendor/cakephp/cakephp-codesniffer/CakePHP'
 )
 
