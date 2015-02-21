@@ -9,11 +9,11 @@ class ApprovedFood_Sniffs_Files_FunctionLengthSniff extends ApprovedFood_DataStr
     /**
      * {@inheritdoc}
      */
-    public $maxLength = 20;
+    public $maxLength = 100;
     /**
      * {@inheritdoc}
      */
-    public $absoluteMaxLength = 20; 
+    public $absoluteMaxLength = 125; 
     /**
      * {@inheritdoc}
      */

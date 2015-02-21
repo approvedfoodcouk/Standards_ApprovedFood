@@ -354,7 +354,7 @@ class ApprovedFood_Sniffs_Styleguide_VariableAnalysisSniff implements PHP_CodeSn
      *  Allow globals to be modified without provoking unused-var warning.
      *  Set generic.codeanalysis.variableanalysis.allowGlobalsModification to a true value.
      */
-    public $allowGlobalsModification = false;
+    public $allowGlobalsModification = true;
     /**
      *  A list of names of placeholder variables that you want to ignore from
      *  unused variable warnings, ie things like $junk.

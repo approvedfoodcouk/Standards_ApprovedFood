@@ -3,6 +3,13 @@
  <description>Approved Food coding standard.</description>
     <exclude name="ApprovedFood.Commenting.FileComment.Missing" />
 
+    <rule ref="ApprovedFood.Commenting.NoTestComment">
+        <properties>
+            <!-- example value: "/vol/www/collabim-app/src/tests/phpunit/src/library;/vol/www/collabim-app/src/tests/phpunit/src/application;" -->
+            <property name="testPaths" value="/_sites/approved/tests/testsuite"/>
+        </properties>
+    </rule>
+
     <!-- Exclude third party code -->
     <exclude-pattern>*/*Test.php</exclude-pattern>
     <exclude-pattern>*/.git/*</exclude-pattern>
