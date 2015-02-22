@@ -2,7 +2,7 @@
 PATH_PRE=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Standards home: ${PATH_PRE}"
 
-sudo phpcs --config-set tab_width 4
+vendor/bin/phpcs --config-set tab_width 4
 
 PHPCS_PACKAGES=(
     'ApprovedFood'
@@ -24,4 +24,4 @@ do
     PRE=","
 done
 
-phpcs --config-set installed_paths "${RULES}"
+vendor/bin/phpcs --config-set installed_paths "${RULES}"
