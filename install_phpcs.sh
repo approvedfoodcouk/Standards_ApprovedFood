@@ -6,14 +6,14 @@ vendor/bin/phpcs --config-set tab_width 4
 
 PHPCS_PACKAGES=(
     'ApprovedFood'
-    'phpcompat'
-    'a24'
     'phpcs-security-audit'
-    'thinkup-codesniffer'
     'drupalcs'
+    'thinkup-codesniffer'
     # 'vendor/fluidtypo3/code-standards'
+    'vendor/phpcompat'
+    'vendor/a24'
     'vendor/wp-coding-standards/wpcs'
-    'vendor/cakephp/cakephp-codesniffer/CakePHP'
+    'vendor/cakephp/cakephp-codesniffer'
 )
 
 RULES=""
@@ -25,3 +25,4 @@ do
 done
 
 vendor/bin/phpcs --config-set installed_paths "${RULES}"
+vendor/bin/phpcs -i

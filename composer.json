@@ -10,17 +10,54 @@
             "role": "Developer"
         }
     ],
-    "repositories": [{
-        "type": "git",
-        "url": "https://github.com/approvedfoodcouk/Standards_ApprovedFood"
-     }],
+     "repositories": [
+         {
+          "type": "git",
+          "url": "https://github.com/approvedfoodcouk/Standards_ApprovedFood"
+         },{
+             "type": "package",
+             "package": {
+                 "name": "a24/A24StudioCS",
+                 "version": "dev-master",
+                 "source": {
+                     "url": "https://github.com/A24Group/A24StudioCS.git",
+                     "type": "git",
+                     "reference": "master"
+                 }
+             }
+         },{
+             "type": "package",
+             "package": {
+                 "name": "phpcompat/phpcompatibility",
+                 "version": "dev-master",
+                 "source": {
+                     "url": "https://github.com/wimg/PHPCompatibility.git",
+                     "type": "git",
+                     "reference": "master"
+                 }
+             }
+         },{
+             "type": "package",
+             "package": {
+                 "name": "sarcas/ThinkUp-CodeSniffer",
+                 "version": "dev-master",
+                 "source": {
+                     "url": "https://github.com/sarcas/ThinkUp-CodeSniffer.git",
+                     "type": "git",
+                     "reference": "master"
+                 }
+             }
+         }
+     ],
     "require": {
         "php": ">=5.3.0",
-        "squizlabs/php_codesniffer": "2.*",
+        "a24/A24StudioCS": "dev-master",
+        "cakephp/cakephp-codesniffer": "*",
         "cubesolutions/phpconsistent": "dev-master",
         "fluidtypo3/coding-standards": "*",
-        "cakephp/cakephp-codesniffer": "*",
+        "phpcompat/PHPCompatibility": "dev-master",
         "simplyadmire/composer-plugins" : "@dev",
+        "squizlabs/php_codesniffer": "2.*",
         "wp-coding-standards/wpcs" : "dev-master"
     },
   "minimum-stability": "stable",
