@@ -2,7 +2,11 @@
 PATH_PRE=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 echo "Standards home: ${PATH_PRE}"
 
-vendor/bin/phpcs --config-set tab_width 4
+#Install PHPCS globally to ensure installed packages are globally available.
+composer global require "squizlabs/php_codesniffer=2.*"
+PHPCS=~/.composer/vendor/bin/phpcs
+
+$PHPCS --config-set tab_width 4
 
 PHPCS_PACKAGES=(
     'ApprovedFood'
@@ -24,5 +28,5 @@ do
     PRE=","
 done
 
-vendor/bin/phpcs --config-set installed_paths "${RULES}"
-vendor/bin/phpcs -i
+$PHPCS --config-set installed_paths "${RULES}"
+$PHPCS -i
