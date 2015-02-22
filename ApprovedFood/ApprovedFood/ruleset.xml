@@ -177,6 +177,8 @@
     <exclude name='WordPress.NamingConventions.ValidFunctionName' />
     <exclude name='WordPress.PHP.YodaConditions' />
     <exclude name='WordPress.WhiteSpace' />
+    <exclude name='WordPress.XSS.EscapeOutput' />
+    <exclude name='WordPress.WP.EnqueuedResources' />
 </rule>
 <rule ref="WordPress-Core">
 </rule>
@@ -329,7 +331,10 @@
  </rule>
  <rule ref='ApprovedFood.Files.FileName'>
     <!-- Legacy: non-conforming file -->
+    <exclude-pattern>indexPage4-201308.php</exclude-pattern>
     <exclude-pattern>indexPage4-201403.php</exclude-pattern>
+    <exclude-pattern>indexPage4mobile-201403.php</exclude-pattern>
+    <exclude-pattern>indexPage4mobile-201403.php</exclude-pattern>
     <!-- Shared links that cannout change -->
     <exclude-pattern>user-debug.php</exclude-pattern>
     <exclude-pattern>debug-headers.php</exclude-pattern>
