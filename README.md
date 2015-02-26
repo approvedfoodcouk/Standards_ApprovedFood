@@ -1,3 +1,11 @@
+**Main codebase status**
+[![Code Climate](https://codeclimate.com/repos/54dfa1ac69568016fc00ee88/badges/41fa8cb995a17eb24334/gpa.svg)](https://codeclimate.com/repos/54dfa1ac69568016fc00ee88/feed)
+[![Test Coverage](https://codeclimate.com/repos/54dfa1ac69568016fc00ee88/badges/41fa8cb995a17eb24334/coverage.svg)](https://codeclimate.com/repos/54dfa1ac69568016fc00ee88/feed)
+[![Circle CI](https://circleci.com/gh/approvedfoodcouk/af_web.svg?style=svg&circle-token=e8a47dba4eef52299165eabd07a6fdbc2008bbe3)](https://circleci.com/gh/approvedfoodcouk/af_web)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/approvedfoodcouk/af_web/badges/quality-score.png?b=master&s=76907f1b7ab9bf529c65c81fb967fefd8488f5b0)](https://scrutinizer-ci.com/g/approvedfoodcouk/af_web/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/approvedfoodcouk/af_web/badges/coverage.png?b=master&s=7adf2a16f2abc6804d3e09891bc9f12f79486e2f)](https://scrutinizer-ci.com/g/approvedfoodcouk/af_web/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/approvedfoodcouk/af_web/badges/build.png?b=master&s=ebbe869a1204f467d476c6021db27d824e7d7d32)](https://scrutinizer-ci.com/g/approvedfoodcouk/af_web/build-status/master)
+
 Welcome to Approved Group Coding Standards
 ===================================
 
