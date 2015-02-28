@@ -27,9 +27,9 @@ class ApprovedFood_Sniffs_Styleguide_InterfacesPrefixedWithISniff implements PHP
     {
         $tokens = $phpcsFile->getTokens();
         $namePtr = $phpcsFile->findNext(array(T_STRING), $stackPtr);
-        if ($namePtr !== FALSE && substr($tokens[$namePtr]['content'], 0, 1) !== 'I') {
+        if ($namePtr !== FALSE && substr($tokens[$namePtr]['content'], -9) !== 'Interface') {
             $phpcsFile->addError(
-                'Interface name must be prefixed with I.',
+                'Interface name must be postfixed with `Interface`.',
                 $namePtr
             );
         }
