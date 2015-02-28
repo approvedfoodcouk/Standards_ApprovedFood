@@ -10,12 +10,6 @@
         </properties>
     </rule>
 
-    <!-- Exclude third party code -->
-    <exclude-pattern>*/*Test.php</exclude-pattern>
-    <exclude-pattern>*/.git/*</exclude-pattern>
-    <exclude-pattern>*/tests/*</exclude-pattern>
-    <exclude-pattern>*/vendor/*</exclude-pattern>
-
     <!-- PSR2 should be the basic, prefer this in all cases -->
     <rule ref="PSR2">
         <!-- Most AF code is in the global namespace, so this is unachievable -->
@@ -171,6 +165,7 @@
        </rule>
 
 <rule ref="WordPress">
+    <exclude name='WordPress.Classes.ValidClassName' />
     <exclude name='WordPress.Arrays.ArrayDeclaration' />
     <exclude name='WordPress.Arrays.ArrayKeySpacingRestrictions' />
     <exclude name='WordPress.Files.FileName' />
@@ -180,6 +175,7 @@
     <exclude name='WordPress.XSS.EscapeOutput' />
     <exclude name='WordPress.WP.EnqueuedResources' />
 </rule>
+
 <rule ref="WordPress-Core">
 </rule>
 <rule ref="WordPress-Extra">
@@ -188,6 +184,9 @@
     <exclude name='WordPress.VIP.SessionVariableUsage' />
     <exclude name='WordPress.VIP.SuperGlobalInputUsage' />
     <exclude name='WordPress.VIP.TimezoneChange' />
+    <exclude name='WordPress.VIP.RestrictedFunctions.cookies' />
+    <exclude name='WordPress.VIP.RestrictedVariables.cache_constraints' />
+    <exclude name='WordPress.VIP.RestrictedFunctions.curl' />
 </rule>
       <!-- <rule ref="WordPress.Arrays.ArrayDeclaration"/> -->
       <!-- <rule ref="WordPress.Arrays.ArrayKeySpacingRestrictions"/> -->
@@ -362,9 +361,51 @@
          <property name="exact" value="true"/>
      </properties>
  </rule>
- <!-- Ignore various version control directories. -->
- <exclude-pattern>*/.git/*</exclude-pattern>
- <exclude-pattern>*/.svn/*</exclude-pattern>
- <exclude-pattern>*/.hg/*</exclude-pattern>
- <exclude-pattern>*/.bzr/*</exclude-pattern>
+
+
+ <!--
+     SESSION HANDLER has must be able to access session data.
+ -->
+ <rule ref="WordPress.VIP.SessionFunctionsUsage">
+     <!-- Intentional non-conforming files -->
+     <exclude-pattern>http.class.php</exclude-pattern>
+     <exclude-pattern>sessionhandler.class.php</exclude-pattern>
+     <exclude-pattern>SessionManager.php</exclude-pattern>
+ </rule>
+ <rule ref="WordPress.VIP.ValidatedSanitizedInput">
+     <!-- Intentional non-conforming files -->
+     <exclude-pattern>http.class.php</exclude-pattern>
+     <exclude-pattern>sessionhandler.class.php</exclude-pattern>
+     <exclude-pattern>SessionManager.php</exclude-pattern>
+     <exclude-pattern>ra_util.php</exclude-pattern>
+ </rule>
+ <rule ref="ApprovedFood.Styleguide.Superglobal.SuperglobalUsage">
+     <!-- Intentional non-conforming files -->
+     <exclude-pattern>http.class.php</exclude-pattern>
+     <exclude-pattern>sessionhandler.class.php</exclude-pattern>
+     <exclude-pattern>SessionManager.php</exclude-pattern>
+ </rule>
+ <rule ref="ApprovedFood.Functions.DeprecatedFunctions.Discouraged">
+     <!-- Intentional non-conforming files -->
+     <exclude-pattern>http.class.php</exclude-pattern>
+     <exclude-pattern>sessionhandler.class.php</exclude-pattern>
+     <exclude-pattern>SessionManager.php</exclude-pattern>
+ </rule>
+ <rule ref="Security.BadFunctions.CallbackFunctions.WarnFringestuff">
+     <!-- Intentional non-conforming files -->
+     <exclude-pattern>http.class.php</exclude-pattern>
+     <exclude-pattern>sessionhandler.class.php</exclude-pattern>
+     <exclude-pattern>SessionManager.php</exclude-pattern>
+ </rule>
+
+ <!--
+     /SESSION HANDLER
+ -->
+
+    <!-- Ignore various version control directories. -->
+    <!-- Exclude third party code -->
+    <exclude-pattern>*/*Test.php</exclude-pattern>
+    <exclude-pattern>*/.git/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
 </ruleset>
