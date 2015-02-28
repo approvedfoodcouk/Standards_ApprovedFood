@@ -29,7 +29,7 @@ class ApprovedFood_Sniffs_Files_SameFilenameAsClassNameSniff extends ApprovedFoo
     {
         $name = $phpcsFile->getDeclarationName($stackPtr);
         $filename = pathinfo($phpcsFile->getFilename(), PATHINFO_FILENAME);
-        if ($name !== $filename) {
+        if ($name.'.class' !== $filename) {
             $phpcsFile->addWarning("Class name '$name' and file name '$filename.php' do not match.", $stackPtr);
         }
     }
