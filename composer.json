@@ -57,6 +57,7 @@
         "fluidtypo3/coding-standards": "*",
         "phpcompat/PHPCompatibility": "dev-master",
         "simplyadmire/composer-plugins" : "@dev",
+        "sarcas/ThinkUp-CodeSniffer" : "@dev",
         "wp-coding-standards/wpcs" : "dev-master"
     },
   "minimum-stability": "stable",
