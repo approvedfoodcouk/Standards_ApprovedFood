@@ -1,15 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="ApprovedFood">
  <description>Approved Food coding standard.</description>
-    <exclude name="ApprovedFood.Commenting.FileComment.Missing" />
-
-    <rule ref="ApprovedFood.Commenting.NoTestComment">
-        <properties>
-            <!-- example value: "/vol/www/collabim-app/src/tests/phpunit/src/library;/vol/www/collabim-app/src/tests/phpunit/src/application;" -->
-            <property name="testPaths" value="/_sites/approved/tests/testsuite"/>
-        </properties>
-    </rule>
-
     <!-- PSR2 should be the basic, prefer this in all cases -->
     <rule ref="PSR2">
         <!-- Most AF code is in the global namespace, so this is unachievable -->
