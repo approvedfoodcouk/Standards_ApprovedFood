@@ -53,7 +53,9 @@
     </rule>
 
     <!-- Ensure our code is compatibile with latest PHP -->
-    <rule ref='PHPCompatibility'></rule>
+    <rule ref='PHPCompatibility'>
+        <exclude name='PHPCompatibility.PHP.DefaultTimezoneRequired' />
+    </rule>
     <!-- Squiz is our main standard. Any clashes from other standards should be excluded -->
     <rule ref="Squiz">
         <!-- TEMPORARY while code is brought closer to standards -->
